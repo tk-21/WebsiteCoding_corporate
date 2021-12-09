@@ -1,0 +1,57 @@
+.works {
+  padding: 191px 0 139px;
+  background-size: cover;
+  background-position: center;
+  @include mq(sp) {
+    padding: 90px 0;
+  }
+  .ttl-en {
+    color: $color-white;
+  }
+  .ttl-jp {
+    color: $color-white;
+    margin-bottom: 46px;
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 82px;
+    @include mq(sp) {
+      display: block;
+    }
+  }
+  &-item {
+    width: per(352, 1120);
+    @include mq(sp) {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    img {
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+    }
+    a:hover {
+      img {
+        opacity: 0.5;
+      }
+    }
+  }
+  &-pic {
+    margin-bottom: 23px;
+    @include mq(sp) {
+      margin-bottom: 10px;
+    }
+  }
+  &-txt {
+    color: $color-white;
+    line-height: division(28, 16);
+    font-family: "游ゴシック", YuGothic;
+    @include mq(sp) {
+      font-size: 14px;
+    }
+  }
+  ._white {
+    color: $color-white;
+    border-color: $color-white;
+  }
+}

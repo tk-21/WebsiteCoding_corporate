@@ -1,0 +1,12 @@
+@keyframes zoom {
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes scroll {
+  100% {
+    transform: translateY(105px);
+  }
+}
+

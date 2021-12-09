@@ -1,0 +1,10 @@
+.service {
+  background: #f7f7f7;
+  padding: 139px 0 142px;
+  @include mq(sp) {
+    padding: 90px 0;
+  }
+  .ttl-jp {
+    margin-bottom: 33px;
+  }
+}

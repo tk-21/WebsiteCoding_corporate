@@ -1,0 +1,12 @@
+.ttl-en {
+  font-size: $size-ttl-en;
+  color: $color-ttl;
+  line-height: division(120, 81);
+  @include mq(sp) {
+    font-size: 50px;
+  }
+}
+
+.ttl-jp {
+  font-size: $size-txt-s;
+}

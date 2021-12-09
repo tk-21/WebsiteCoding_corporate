@@ -1,0 +1,27 @@
+.sublist {
+  &-item {
+    margin-bottom: 15px;
+    a {
+      font-size: $size-txt-s;
+      color: $color-text-thin;
+      transition: all 0.3s;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 1px;
+        background: #333333;
+        transition: all 0.3s;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

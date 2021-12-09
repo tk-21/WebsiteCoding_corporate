@@ -1,0 +1,124 @@
+.about {
+  margin-top: -138px;
+  padding-bottom: 116px;
+  &-movie {
+    background: #fff;
+    height: 138px;
+    width: per(1056);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: per(160);
+    padding-right: 45px;
+    position: relative;
+    @include mq(tab) {
+      width: 60%;
+      margin-bottom: 60px;
+    }
+    @include mq(sp) {
+      display:block;
+      padding-top: 30px;
+    }
+    .movie-btn {
+      display: flex;
+      align-items: center;
+      span {
+        margin-right: 16px;
+        font-size: $size-txt-s;
+      }
+      a {
+        width: 60px;
+        height: 60px;
+        border: 1px solid #707070;
+        border-radius: 50%;
+        transition: all 0.4s ease;
+        position: relative;
+        img {
+          width: 20px;
+          position: absolute;
+          top: 50%;
+          left: 54%;
+          transform: translate(-50%, -50%);
+        }
+        &:hover {
+          background: #707070;
+        }
+      }
+    }
+  }
+  &-ttl {
+    color: #2d2d2d;
+    @include mq(sp) {
+      margin-bottom: 30px;
+    }
+  }
+  &-head {
+    margin-left: per(96);
+    margin-bottom: 60px;
+    @include mq(sp) {
+      margin-left: 0;
+    }
+  }
+  &-copy {
+    font-size: 30px;
+    margin-bottom: 36px;
+    @include mq(sp) {
+      font-size: 27px;
+    }
+  }
+  &-txt {
+    line-height: division(27, 16);
+    font-size: 14px;
+  }
+  &-list {
+    display: flex;
+    margin-bottom: 60px;
+    @include mq(sp) {
+      display: block;
+    }
+  }
+  &-item {
+    width: calc((100% - 64px) / 3);
+    text-align: center;
+    @include mq(sp) {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    &:not(:nth-child(3n)) {
+      margin-right: 32px;
+      @include mq(sp) {
+        margin-right: 0;
+      }
+    }
+    a {
+      position: relative;
+      margin-bottom: 30px;
+      @include mq(sp) {
+        margin-bottom: 10px;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  &-pic {
+    overflow: hidden;
+    img {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  &-heading {
+    font-size: 36px;
+    letter-spacing: 0.04em;
+    color: $color-white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &-txt {
+    text-align: left;
+  }
+}

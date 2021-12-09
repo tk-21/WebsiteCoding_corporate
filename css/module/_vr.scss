@@ -1,0 +1,44 @@
+.vr {
+  padding: 122px 0 110px;
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mq(sp) {
+      display: block;
+    }
+  }
+  &-item {
+    width: per(352, 1120);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+    @include mq(sp) {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    &:hover {
+      box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.65);
+    }
+    a {
+      padding: 60px 0 59px;
+      width: 100%;
+      color: $color-white;
+      font-size: 20px;
+      font-family: "游ゴシック", YuGothic;
+    }
+  }
+  ._left {
+    background-image: url(../img/vr1.png);
+  }
+  ._center {
+    background-image: url(../img/vr2.png);
+  }
+  ._right {
+    background-image: url(../img/vr2.png);
+    @include mq(sp) {
+      margin-bottom: 0;
+    }
+  }
+}

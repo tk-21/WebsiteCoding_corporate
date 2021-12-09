@@ -1,0 +1,129 @@
+.footer {
+  background: $color-bg-footer;
+  padding-top: 72px;
+  &-upper {
+    display: flex;
+    padding-bottom: 78px;
+    border-bottom: 1px solid $color-footer-line;
+    @include mq(sp) {
+      display: block;
+    }
+  }
+  &-logo {
+    margin-right: per(96, 1120);
+    @include mq(sp) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      font-family: toppan-bunkyu-mincho-pr6n, serif;
+      font-size: 17px;
+      img {
+        width: 29.37px;
+        margin-right: 4.6px;
+      }
+    }
+  }
+  &-info {
+    @include mq(sp) {
+      margin-bottom: 50px;
+    }
+  }
+  &-txt {
+    font-size: $size-txt-s;
+    letter-spacing: 0.04em;
+    font-family: "Oswald";
+    &._company {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      line-height: division(24, 16);
+    }
+    &._address {
+      margin-bottom: 25px;
+      span {
+        display: inline-block;
+        margin-right: 38px;
+        margin-bottom: 13px;
+      }
+    }
+    &._time {
+      margin-bottom: 10px;
+    }
+  }
+  &-sns {
+    margin-left: auto;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    a {
+      transition: all 0.3s;
+      &:hover {
+        color: $color-accent;
+        animation: zoom 0.3s;
+        @include mq(sp) {
+          animation: none;
+        }
+      }
+    }
+    a:not(:last-child) {
+      margin-right: 56px;
+    }
+    a:nth-of-type(2) {
+      margin-right: 43px;
+    }
+  }
+
+  &-lower {
+    padding: 29px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mq(sp) {
+      align-items: flex-start;
+      padding: 40px 0;
+    }
+  }
+  &-list {
+    display: flex;
+    &._left {
+      @include mq(sp) {
+        display: block;
+        font-size: 14px;
+      }
+    }
+    &._right {
+      li:first-of-type {
+        margin-right: 22px;
+      }
+    }
+  }
+  &-item {
+    margin-right: 64px;
+    @include mq(sp) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    a {
+      transition: all 0.3s;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 1px;
+        background: #333333;
+        transition: all 0.3s;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

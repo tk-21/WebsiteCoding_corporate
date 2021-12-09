@@ -1,0 +1,67 @@
+.news {
+  padding-bottom: 178px;
+  &-list {
+    margin-bottom: 60px;
+    display: none;
+    @include mq(sp) {
+      font-size: 14px;
+    }
+    &.active {
+      display: block;
+    }
+  }
+  &-item {
+    display: flex;
+    @include mq(tab) {
+      display: block;
+    }
+    &:last-of-type {
+      .news-header {
+        border-bottom: 1px solid #333333;
+        @include mq(tab) {
+          border-bottom: none;
+        }
+      }
+      .news-body {
+        border-bottom: 1px solid #dddddd;
+        @include mq(tab) {
+          border-bottom: 1px solid #333333;
+        }
+      }
+    }
+  }
+  &-header {
+    width: per(288, 1120);
+    padding: 25px 0 25px 29.5px;
+    border-top: 1px solid #333333;
+    @include mq(tab) {
+      width: 100%;
+      padding: 20px 15px 15px 15px;
+    }
+    time {
+      margin-right: 46px;
+    }
+    a {
+      display: inline;
+      color: $color-accent;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &-body {
+    width: per(832, 1120);
+    padding: 25px 47px 25px 49px;
+    border-top: 1px solid #dddddd;
+    @include mq(tab) {
+      width: 100%;
+      padding: 0 15px 20px 15px;
+      border: none;
+    }
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

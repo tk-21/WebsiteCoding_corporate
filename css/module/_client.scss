@@ -1,0 +1,78 @@
+.client {
+  padding: 191px 0 147px;
+  background: $color-bg-client;
+  @include mq(sp) {
+    padding: 120px 0;
+  }
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    @include mq(sp) {
+      display: block;
+    }
+  }
+  &-ttl {
+    color: $color-white;
+    @include mq(sp) {
+      margin-bottom: 60px;
+    }
+  }
+  &-wrapper {
+    width: per(710, 1120);
+    @include mq(sp) {
+      width: 200px;
+      margin: 0 auto;
+    }
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mq(sp) {
+      display: block;
+    }
+    &._upper {
+      margin-bottom: 59px;
+      @include mq(sp) {
+        margin-bottom: 0;
+      }
+      .client-item {
+        &._left {
+          width: 143px;
+        }
+        &._center {
+          width: 134px;
+        }
+        &._right {
+          width: 104px;
+          margin-right: 18px;
+          @include mq(sp) {
+            margin-right: auto;
+          }
+        }
+      }
+    }
+    &._lower {
+      .client-item {
+        &._left {
+          width: 183px;
+          margin-left: -16px;
+          @include mq(sp) {
+            margin: 15px 0 15px -16px;
+          }
+        }
+        &._center {
+          width: 201px;
+        }
+        &._right {
+          width: 139px;
+        }
+      }
+    }
+  }
+  &-item {
+    @include mq(sp) {
+      margin-bottom: 30px;
+    }
+  }
+}

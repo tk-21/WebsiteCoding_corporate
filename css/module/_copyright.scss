@@ -1,0 +1,13 @@
+.copyright {
+  background: $color-accent;
+  height: vw(200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq(sp) {
+    height: 150px;
+  }
+  &-txt {
+    color: $color-white;
+  }
+}

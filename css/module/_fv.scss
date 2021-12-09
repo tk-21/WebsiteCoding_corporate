@@ -1,0 +1,105 @@
+.fv {
+  height: calc(100vh - 128px);
+  background-image: url(../img/fv.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: per(128);
+  padding-top: 188px;
+  position: relative;
+  @include mq(sp) {
+    margin-left: 0;
+  }
+  &-inner {
+    max-width: 1097px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    position: relative;
+  }
+  &-txt {
+    font-size: 54px;
+    line-height: division(72, 54);
+    color: $color-white;
+    margin-bottom: 49px;
+    @include mq(sp) {
+      font-size: 30px;
+      margin-bottom: 24px;
+    }
+  }
+  ._white {
+    color: $color-white;
+    font-size: $size-link-en;
+    &::before {
+      background: $color-white;
+    }
+    &::after {
+      background: $color-white;
+    }
+  }
+  &-link {
+    position: absolute;
+    bottom: 42px;
+    right: per(100, 1312);
+    display: flex;
+    @include mq(sp) {
+      display: block;
+      bottom: 20px;
+    }
+  }
+  &-item {
+    padding: 17px 27px 17px 30px;
+    a {
+      color: $color-white;
+      overflow: hidden;
+      height: 2em;
+      text-align: center;
+      span {
+        display: block;
+        line-height: 2em;
+        transform: translateY(0);
+        transition: transform 0.2s cubic-bezier(0.7, 0, 0, 1);
+      }
+      span:nth-of-type(2) {
+        @include mq(sp) {
+          display: none;
+        }
+      }
+      &:hover {
+        span {
+          transform: translateY(-100%);
+          @include mq(sp) {
+            transform: none;
+          }
+        }
+      }
+    }
+    &._left {
+      border-right: 1px solid $color-white;
+      @include mq(sp) {
+        border: none;
+      }
+    }
+  }
+  &-scroll {
+    position: absolute;
+    bottom: per(102, 700);
+    left: per(-64);
+    width: 1px;
+    height: 122px;
+    background: #bebebe;
+    @include mq(sp) {
+      display: none;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 17px;
+      background: #000000;
+      animation: scroll 1.5s ease-in-out infinite;
+    }
+  }
+}
